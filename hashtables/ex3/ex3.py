@@ -1,7 +1,19 @@
 def intersection(arrays):
     """
     YOUR CODE HERE
+
+    add the first list to the cache with each digit as key and the value as one
+    add each successive list to the cache, only if the digit already exists. if it exists increase the value by one.
+
+    for each item in the cache:
+        if the value is equal to the number of arrays, add it to the result.
+
+    return result
+
     """
+
+
+    
     # Your code here
 
     return result
