@@ -10,5 +10,12 @@ def reconstruct_trip(tickets, length):
     YOUR CODE HERE
     """
     # Your code here
+    tickcache = {}
+    for x in tickets:
+        tickcache[x.source] = x.destination
+    
+    starttick = tickcache[None]
 
-    return route
+    
+        
+    
