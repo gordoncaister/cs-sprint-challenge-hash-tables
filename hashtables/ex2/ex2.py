@@ -10,12 +10,23 @@ def reconstruct_trip(tickets, length):
     YOUR CODE HERE
     """
     # Your code here
+    route = []
     tickcache = {}
-    for x in tickets:
-        tickcache[x.source] = x.destination
     
-    starttick = tickcache[None]
+    for x in tickets:
+        print(x.source,x.destination)
+        tickcache[x.source] = x.destination
 
+    starttick = tickcache['NONE']
+
+    
+
+    while starttick != 'NONE':
+        route.append(starttick)
+        starttick = tickcache[starttick]
+
+    route.append("NONE")
+    return route
     
         
     
