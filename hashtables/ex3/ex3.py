@@ -12,11 +12,25 @@ def intersection(arrays):
 
     """
 
+    cache ={}
 
+    for i in arrays[0]:
+        cache[i] = 1
+
+    for i in range(len(arrays)-1):
+        for j in arrays[i+1]:
+            if j in cache:
+                cache[j]+=1
+    results = []
+    for i in cache:
+        if cache[i] == len(arrays):
+            results.append(i)
     
+    return results
+
     # Your code here
 
-    return result
+
 
 
 if __name__ == "__main__":
